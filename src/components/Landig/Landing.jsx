@@ -52,7 +52,7 @@ export default function Landing({ onScrollToSection, refs }) {
             layouts in Figma, layout according to the layout
           </p>
           <div className="landing-main-content-button">
-            <a className="landing-main-content-button-contact">Contact me</a>
+            <a className="landing-main-content-button-contact" href="https://t.me/LelFrontend">Contact me</a>
             <a className="landing-main-content-button-works">My works</a>
           </div>
         </div>
