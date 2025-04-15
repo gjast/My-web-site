@@ -1,0 +1,31 @@
+@use '../../../globalStyle.scss' as *;
+
+.Card {
+	color: white;
+	display: inline-block;
+	align-items: center;
+	
+}
+.Card_main {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border-radius: $border-radius;
+	background-color: black;
+	img {
+		max-width: 60vw;
+	}
+
+	&_first {
+		font-size: 8vw;
+		text-wrap: balance;
+	}
+	&_second {
+		margin-top:10px;
+		border-top: solid 1px white;
+		font-size: 4vw;
+	}
+	
+}

@@ -1,0 +1,119 @@
+@use '../../globalStyle.scss' as * ;
+.Contacts {
+	height: 39vh;
+	padding: $padding-glonal;
+	color: white;
+	
+}
+
+.Contacts_title {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: $background-color;
+	padding: $padding;
+	border-radius: $border-radius;
+	backdrop-filter: blur(10px);
+	transition: all .2s ease;
+	&:hover {
+		background-color: rgba(240, 248, 255, 0.215);
+		backdrop-filter: blur(1px);
+		box-shadow: 0 0 40px 1px rgba(240, 248, 255, 0.335);
+		transform: scale(1.01);
+
+	}
+	h2 {
+		font-size: 3vw;
+		font-weight: 600;
+		background-color: black;
+		padding: $padding;
+		border-radius: $border-radius;
+		@media screen and (max-width: 675px) {
+			font-size: 5vw;
+		}
+	}
+}
+.Contacts_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.Contacts_info {
+	cursor: pointer;
+	margin-top: 20px;
+	width: 60vw;
+	background-color: $background-color;
+	border-radius: $border-radius;
+	backdrop-filter: blur(2px);
+	padding: $padding-glonal;
+	display: flex;
+	justify-content: space-evenly;
+	transition: all .2s ease;
+	gap: 20px;
+	&:hover {
+		background-color: rgba(240, 248, 255, 0.215);
+		backdrop-filter: blur(3px);
+		box-shadow: 0 0 40px 1px rgba(240, 248, 255, 0.335);
+	}
+	img {
+		width: 25vw;
+		@media screen and (max-width: 675px) {
+			width: 40vw;
+		}
+	}
+
+	.container_code {
+		display: inline-flex;
+		border-radius: 2vw;
+		background-color: black;
+		align-items: center;
+		justify-content: center;
+		width: 25vw;
+		@media screen and (max-width: 675px) {
+			width: 40vw;
+		}
+	
+	}
+}
+
+
+$height_img: 15vw;
+
+@mixin img {
+	  opacity: .5;
+		transition: all .2s ease;
+		width: $height_img;
+		&:hover {
+			filter: drop-shadow(0px 0px 10px  #ffffff);
+					  }
+	
+}
+
+.IMG_Pencil {
+	position: absolute;
+	right: 2vw;
+	bottom: 0;
+	rotate: 15deg;
+	padding: 0;
+	@include img;
+}
+
+.IMG_UX {
+	position: absolute;
+	left: 0;
+	top: 10%;
+	rotate: -15deg;
+	@include img;
+}
+
+@media screen and (max-width: 1120px) {
+	.IMG_Pencil, .IMG_UX {
+		display: none;
+	}
+	.Contacts_info {
+		width: 100vw;
+	}
+}

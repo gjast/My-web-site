@@ -1,0 +1,122 @@
+@use "../../globalStyle.scss" as *;
+
+.About {
+	margin-top: 20px;
+	color: #ffffff;
+	padding: $padding-glonal;
+}
+
+.About_container_title {
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: $background-color;
+	padding: $padding;
+	border-radius: $border-radius;
+	backdrop-filter: blur(10px);
+	transition: all .2s ease;
+	&:hover {
+		background-color: rgba(240, 248, 255, 0.215);
+		backdrop-filter: blur(1px);
+		box-shadow: 0 0 40px 1px rgba(240, 248, 255, 0.335);
+		transform: scale(1.01);
+
+	}
+	h2 {
+		font-size: 3vw;
+		font-weight: 600;
+		background-color: black;
+		padding: $padding;
+		border-radius: $border-radius;
+		@media screen and (max-width: 675px) {
+			font-size: 5vw;
+		}
+	}
+}
+
+.About_container_content {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-top: 20px;
+	gap: 20px;
+
+	@media screen and (max-width: 1040px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+}
+
+.About_container_text {
+	display: inline;
+	background-color: $background-color;
+	backdrop-filter: blur(2.5px);
+	padding: $padding;
+	max-width: 40%;
+	border-radius: $border-radius;
+	transition: all .3s ease;
+	&:hover {
+		background-color: rgba(240, 248, 255, 0.215);
+		backdrop-filter: blur(1px);
+		box-shadow: 0 0 10px 10px rgba(240, 248, 255, 0.135);
+
+	}
+	p {
+		font-size: 1.5rem;
+		background-color: #000000;
+		padding: 15px;
+		border-radius: $border-radius;
+		font-weight: 500;
+		text-wrap: balan ce;
+	}
+
+	@media  screen and (max-width: 1040px) {
+		max-width: 100%;
+		
+	}
+}
+
+// .About_container_img {
+// 	display: grid;
+// 	grid-template-columns: repeat(3, 1fr);
+// 	margin-right: 5vw;
+// 	gap: 50px;
+// 	opacity: 0;
+// 	transform: translateX(100px);
+// 	transition: all 0.8s ease-out;
+// 	align-items: center;
+// 	&.visible {
+// 		opacity: 1;
+// 		transform: translateX(0);
+// 	}
+// 	@media screen and (max-width: 1040px) {
+// 		grid-template-columns: repeat(2, 1fr);
+// 	}
+// }
+
+.About_container_img.hidden {
+	opacity: 0;
+	transform: translateX(20px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .About_container_img.visible {
+	opacity: 1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 50px;
+	align-items: center;
+	margin-right: 5vw;
+	transform: translateX(0);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	@media screen and (max-width: 1040px) {
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0;
+		
+	}
+  }
+  
+

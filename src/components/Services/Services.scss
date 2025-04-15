@@ -1,0 +1,59 @@
+@use "../../globalStyle.scss" as *;
+
+
+@mixin animateHover {
+	display: inline-flex;
+	color: white;
+	background-color: $background-color;
+	backdrop-filter: blur(2.5px);
+	padding: $padding;
+	border-radius: $border-radius;
+	transition: all .3s ease;
+	&:hover {
+		background-color: rgba(240, 248, 255, 0.215);
+		backdrop-filter: blur(1px);
+		box-shadow: 0 0 10px 10px rgba(240, 248, 255, 0.135);
+
+	}
+}
+.Services {
+	padding: $padding-glonal;
+
+}
+
+.Services_title {
+	display: flex;
+	gap: 20px;
+}
+
+.Services_title_main, .Services_title_par {
+	@include animateHover();
+
+.Cont_text {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border-radius: $border-radius;
+	background-color: black;
+	padding: 0 20px;
+}
+	h2 {
+		font-size: 3vw;
+		font-weight: 600;
+		@media screen and (max-width: 675px) {
+			font-size: 5vw;
+		}
+	}
+	 p{
+		font-size: 2vw;
+
+		font-weight: 500;
+	 }
+
+	 @media screen and (max-width: 1040px) {
+		h2, p {
+			padding: $padding;
+		}
+	 }
+}
