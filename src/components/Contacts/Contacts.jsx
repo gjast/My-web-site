@@ -28,7 +28,12 @@ export default forwardRef(function Contacts(props, ref) {
       </div>
       <div className="Contacts_container" onMouseMove={handleMouseMove}>
         <div className="Contacts_info">
-          <img src="./img/qr-code.png" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} />
+          <img 
+            src="./img/qr-code.png" 
+            onClick={() => window.location.href = "https://t.me/LelFrontend"}
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)} 
+          />
 
           <div className="container_code">
             {isHovered && window.innerWidth > 1140 ?(
@@ -40,7 +45,7 @@ export default forwardRef(function Contacts(props, ref) {
                 filter: isShadowVisible ? 'drop-shadow(0px 0px 10px #ffffff)' : 'drop-shadow(0px 0px 10px rgba(255, 255, 255, 0))',
                 transition: 'filter 1s ease-out',
               }}
-              href="https://t.me/LelFrontend"
+              
               src="./img/code.png"
             />)
           }
